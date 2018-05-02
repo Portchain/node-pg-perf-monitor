@@ -1,0 +1,34 @@
+
+
+table {
+  font-size: 12px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td, th { 
+  border: 1px solid #CCC; 
+  height: 30px; 
+}
+
+th {  
+  background: #F3F3F3;
+  font-weight: bold;
+}
+
+td > div.scrollable {
+  max-height: 50px;
+  overflow-y: auto;
+}
+
+
+td {
+  text-align: left;
+  padding: 5px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #FFFFFF;
+}
+tbody tr:nth-child(even) {
+  background-color: #EEF7EE;
+}

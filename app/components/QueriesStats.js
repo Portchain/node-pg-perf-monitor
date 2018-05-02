@@ -10,10 +10,10 @@ export default function QueriesStats(props) {
           <tr>
             <th>Query</th>
             <th>calls</th>
-            <th>totalTime</th>
-            <th>minTime</th>
-            <th>maxTime</th>
-            <th>meanTime</th>
+            <th>totalTime (ms)</th>
+            <th>minTime (ms)</th>
+            <th>maxTime (ms)</th>
+            <th>meanTime (ms)</th>
             <th>rows</th>
             <th>percentCacheHit</th>
           </tr>
@@ -21,14 +21,14 @@ export default function QueriesStats(props) {
         <tbody>
           {queries.map((query, i) =>
             <tr key={'slow-query-' + i}>
-                <td>{query.query}</td>
+                <td><div className="scrollable">{query.query}</div></td>
                 <td>{query.calls}</td>
-                <td>{query.totalTime}</td>
-                <td>{query.minTime}</td>
-                <td>{query.maxTime}</td>
-                <td>{query.meanTime}</td>
+                <td>{Math.round(query.totalTime)}</td>
+                <td>{Math.round(query.minTime)}</td>
+                <td>{Math.round(query.maxTime)}</td>
+                <td>{Math.round(query.meanTime)}</td>
                 <td>{query.rows}</td>
-                <td>{query.hitPercent}</td>
+                <td>{Math.round(query.hitPercent)}</td>
             </tr>
           )}
         </tbody>

@@ -4,13 +4,14 @@ export default function renderFullPage(html, preloadedState) {
       <html>
       <head>
           <title>Your SSR React Router Node App initialised with data!</title>
+          <link rel="stylesheet" type="text/css" href="styles/all.css" media="screen" />
       </head>
       <body>
           <div id="root">${html}</div>
           <script>
           window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
           </script>
-          <script src="/bundle.js"></script>
+          <script src="bundle.js"></script>
       </body>
       </html>
   `
