@@ -1,0 +1,15 @@
+{
+  "presets":[
+    "env", "react"
+  ],
+  "env": {
+    "server": {
+      "plugins": [[
+        "css-modules-transform", {
+          "extractCss": "./build/style.css",
+          "devMode": false
+        }
+      ]]
+    }
+  }
+}
